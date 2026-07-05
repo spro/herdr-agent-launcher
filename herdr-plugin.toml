@@ -16,3 +16,9 @@ id = "open-fable"
 title = "Open Fable agent"
 contexts = ["global"]
 command = ["bash", "launch.sh", "fable"]
+
+[[actions]]
+id = "open-codex"
+title = "Open Codex agent"
+contexts = ["global"]
+command = ["bash", "launch.sh", "codex", "codex"]
