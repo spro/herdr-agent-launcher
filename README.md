@@ -14,12 +14,6 @@ Clone this repo:
 git clone https://github.com/spro/herdr-agent-launcher ~/Projects/herdr-agent-launcher
 ```
 
-Register it as a Herdr plugin:
-
-```sh
-herdr plugin install ~/Projects/herdr-agent-launcher
-```
-
 Then add keybindings to `~/.config/herdr/config.toml` (see [Keybindings](#keybindings)).
 
 ## Usage
