@@ -2,6 +2,26 @@
 
 Herdr plugin for opening a new named tab and running an agent command in it.
 
+## Installation
+
+**Prerequisite:** The tab-name prompt requires the
+[spro/herdr feat/input-prompt](https://github.com/spro/herdr/tree/feat/input-prompt)
+fork. Install it before proceeding.
+
+Clone this repo:
+
+```sh
+git clone https://github.com/spro/herdr-agent-launcher ~/Projects/herdr-agent-launcher
+```
+
+Register it as a Herdr plugin:
+
+```sh
+herdr plugin install ~/Projects/herdr-agent-launcher
+```
+
+Then add keybindings to `~/.config/herdr/config.toml` (see [Keybindings](#keybindings)).
+
 ## Usage
 
 Run `launch.sh` with the command to execute:
@@ -43,7 +63,7 @@ opens the tab and starts the agent:
 ![The Fable tab name input modal opened by prefix+ctrl+f](docs/input-modal.png)
 
 The tab-name prompt uses `herdr input --prompt`, which currently only exists
-in the [spro/herdr](https://github.com/spro/herdr) fork (the `input.prompt`
+in the [spro/herdr feat/input-prompt](https://github.com/spro/herdr/tree/feat/input-prompt) fork (the `input.prompt`
 socket API); it has not landed in upstream herdr yet.
 
 ## Environment
