@@ -2,23 +2,5 @@ id = "herdr-agent-launcher"
 name = "Agent Launcher"
 version = "0.1.0"
 min_herdr_version = "0.7.0"
-description = "Open a new named tab running a specific Claude model"
+description = "Open a new named tab running any agent"
 platforms = ["linux", "macos"]
-
-[[actions]]
-id = "open-sonnet"
-title = "Open Sonnet agent"
-contexts = ["global"]
-command = ["bash", "launch.sh", "sonnet"]
-
-[[actions]]
-id = "open-fable"
-title = "Open Fable agent"
-contexts = ["global"]
-command = ["bash", "launch.sh", "fable"]
-
-[[actions]]
-id = "open-codex"
-title = "Open Codex agent"
-contexts = ["global"]
-command = ["bash", "launch.sh", "codex", "codex"]
