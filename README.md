@@ -18,6 +18,34 @@ the first word of the command.
 When launched, the script prompts for a tab name. Leaving the prompt blank uses
 the default name.
 
+## Keybindings
+
+Bind launchers to keys with `[[keys.command]]` entries in
+`~/.config/herdr/config.toml`:
+
+```toml
+[[keys.command]]
+key = "prefix+ctrl+s"
+type = "shell"
+command = "bash ~/Projects/herdr-agent-launcher/launch.sh 'claude --model sonnet' sonnet"
+description = "open sonnet agent"
+
+[[keys.command]]
+key = "prefix+ctrl+f"
+type = "shell"
+command = "bash ~/Projects/herdr-agent-launcher/launch.sh 'claude --model fable' fable"
+description = "open fable agent"
+```
+
+Pressing `prefix+ctrl+f` pops the inline input modal for the tab name, then
+opens the tab and starts the agent:
+
+![The Fable tab name input modal opened by prefix+ctrl+f](docs/input-modal.png)
+
+The tab-name prompt uses `herdr input --prompt`, which currently only exists
+in the [spro/herdr](https://github.com/spro/herdr) fork (the `input.prompt`
+socket API); it has not landed in upstream herdr yet.
+
 ## Environment
 
 The launcher expects a Herdr workspace ID from one of these variables:
